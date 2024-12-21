@@ -22,6 +22,10 @@ in
 	pkgs.mkShell {
 		buildInputs = [ zig ];
 
+		packages = with pkgs; [
+			gdb
+		];
+
 		shellHook = ''
 		echo "Development environment ready with Zig 0.14.0!"
 		'';
